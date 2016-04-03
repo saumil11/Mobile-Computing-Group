@@ -1,0 +1,1053 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSUN Mobile Computing Group | Publications</title>
+	
+	<!-- core CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/animate.min.css" rel="stylesheet">
+    <link href="css/prettyPhoto.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
+	<link href="css/custom.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->       
+    <!--<link rel="shortcut icon" href="images/ico/favicon.ico">-->
+	<link rel="shortcut icon" type="image/png" href="images/main.ico" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
+	
+	<style>
+		.navbar-nav > li{
+			margin-left:3px;
+			margin-right:3px;
+		}
+		#topLink:hover{
+			color:#c52d2f;
+		}
+	</style>
+	
+</head><!--/head-->
+
+<body style="background-color:#f2f2f2">
+	<noscript><div class="alert alert-warning">JavaScript is disabled on this browser, to get a better experience it is better to enable JavaScript.</div></noscript>
+
+    <header id="header" style="position:fixed;margin-bottom:100px; z-index:999; width:100%;">
+        
+        <nav class="navbar navbar-inverse" role="banner">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a id="mainHeading" style="font-size:30px;font-weight:bold;" class="navbar-brand" href="index.html">
+						<!--<img src="images/saumilsoni.png" alt="logo">-->CSUN Mobile Computing Group
+					</a>
+					<a style="font-size:15px;font-weight:bold;" class="navbar-brand prb" href="index.html">
+						<!--<img src="images/saumilsoni.png" alt="logo">-->CSUN Mobile Computing Group
+					</a>
+                </div>
+				
+                <div class="collapse navbar-collapse navbar-right" style="font-weight:bold;">
+                    <ul class="nav navbar-nav">
+						<li><a href="index.html">Home</a></li>
+						<li><a href="news.html">News</a></li> 
+                        <li><a href="people.html">People</a></li>
+                        <li><a href="research.html">Research</a></li>
+						<li class="active"><a href="publications.html">Publications</a></li>
+						<li><a href="grants.html">Funding</a></li>
+						<li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div><!--/.container-->
+        </nav><!--/nav-->
+		
+    </header><!--/header-->
+	
+	<div class="container">
+	<section>
+		<p class="col-md-12" id="top">&nbsp;</p><p class="col-md-12">&nbsp;</p><p class="col-md-12">&nbsp;</p><p class="col-md-12">&nbsp;</p>
+		<p id="topLink" style="cursor:pointer;position:fixed;left:15px;bottom:5px;padding:10px;background-color:white;display:none;">
+			<span style="visibility:hidden;">Go </span>
+			<span class="glyphicon glyphicon-chevron-up"></span>
+			<br />
+			<b><i>Go to top</i></b>
+		</p>
+		<div class="container">
+			<div class="col-md-12">
+			
+				<center class="col-md-12">
+					<div class="col-md-9">
+						<input type="text" id="search" class="form-control" placeholder="Type any phrase/keywords to search" width="80%"/>
+						<p style="text-align:left;" class="help-block">Separate the keywords with (white)spaces</p>
+					</div>
+					<div class="col-md-3">
+						<button class="btn btn-info" onclick="showAdvanceSearch();">Advance Search 
+							<span class="glyphicon glyphicon-chevron-down" id="down"></span>
+							<span class="glyphicon glyphicon-chevron-up" id="up" style="display:none;"></span>
+						</button>
+					</div>
+					<p class="col-md-12">&nbsp;</p>
+				</center>
+				<div class="col-md-12" style="border:1px solid black;border-radius:15px;display:none;" id="advanceSearchDialogue">
+					<form id="advanceSearchForm"></form>
+					<p class="col-md-12">&nbsp;</p>
+					<div class="col-md-4">
+						<label>Publication Type:</label>
+						<select class="form-control" id="publicationType" form="advanceSearchForm">
+							<option value="">Any</option>
+							<option value="journal">Journal Papers</option>
+							<option value="book">Book Chapter</option>
+							<option value="conference">Conference Papers</option>
+							<option value="patent">Patents</option>
+							<option value="thesis">Thesis</option>
+							<option value="photograph">Photograph</option>
+						</select>
+					</div>
+					<p class="col-xs-12 prb">&nbsp;</p>
+					<div class="col-md-4">
+						<label>Author:</label>
+						<select class="form-control" id="author" form="advanceSearchForm">
+							<option value="">Any</option>
+							<option value="Alireza Vahdatpour">Alireza Vahdatpour</option>	
+							<option value="Allen Sarkisyan">Allen Sarkisyan</option>	
+							<option value="Andrea Acquaviva">Andrea Acquaviva</option>	
+							<option value="Ani Nahapetian">Ani Nahapetian</option>	
+							<option value="Antonio Grass">Antonio Grass</option>	
+							<option value="Armen Babakanian">Armen Babakanian</option>	
+							<option value="Arsen Papisyan">Arsen Papisyan</option>	
+							<option value="Ashley Yu">Ashley Yu</option>	
+							<option value="Charles Ling">Charles Ling</option>
+							<option value="Chien-An Chen">Chien-An Chen</option>	
+							<option value="Danial Moazen">Danial Moazen</option>	
+							<option value="Daniel Semel">Daniel Louis Bennett Semel</option>
+							<option value="Davit Stepanyan">Davit Stepanyan</option>	
+							<option value="Denise Aberle">Denise Aberle</option>	
+							<option value="Dina Najeeb">Dina Najeeb</option>	
+							<option value="Farinaz Koushanfar">Farinaz Koushanfar</option>	
+							<option value="Florence-Joy Figueras">Florence-Joy Figueras</option>
+							<option value="Foad Dabiri">Foad Dabiri</option>	
+							<option value="Gladys Mae Garcia">Gladys Mae Garcia</option>	
+							<option value="Hassan Ghasemzadeh">Hassan Ghasemzadeh</option>	
+							<option value="Hyduke Noshadi">Hyduke Noshadi</option>	
+							<option value="Hyun J. Moon">Hyun J. Moon</option>	
+							<option value="James B Wendt">James B Wendt</option>	
+							<option value="James Pan">James Paul Jei Pan</option>
+							<option value="James Sayre">James Sayre</option>	
+							<option value="Jamie Macbeth">Jamie Macbeth</option>	
+							<option value="Jinha Kang">Jinha Kang</option>	
+							<option value="Jonathan Woodbridge">Jonathan Woodbridge</option>	
+							<option value="Jung In Kim">Jung In Kim</option>	
+							<option value="Kyeong Hoon Jung">Kyeong Hoon Jung</option>	
+							<option value="Kyle Dorman">Kyle Dorman</option>	
+							<option value="KyuJoong Lee">KyuJoong Lee</option>	
+							<option value="Kyungsik Han">Kyungsik Han</option>	
+							<option value="Lawrence Au">Lawrence Au</option>	
+							<option value="Lorraine S. Evangelista">Lorraine S. Evangelista</option>	
+							<option value="Luca Benini">Luca Benini</option>	
+							<option value="Mahsan Rofouei">Mahsan Rofouei</option>	
+							<option value="Majid Sarrafzadeh">Majid Sarrafzadeh</option>	
+							<option value="Marjan Yahyanejad">Marjan Yahyanejad</option>	
+							<option value="Mars Lan">Mars Lan</option>	
+							<option value="Maxim Batalin">Maxim Batalin</option>	
+							<option value="Michael Kai Tu">Michael Kai Tu</option>	
+							<option value="Michael Nelson">Michael Nelson</option>	
+							<option value="Miodrag Potkonjak">Miodrag Potkonjak</option>	
+							<option value="Myung-kyung Suh">Myung-kyung Suh</option>	
+							<option value="Nipun Gupta">Nipun Gupta</option>
+							<option value="Paolo Lombardo">Paolo Lombardo</option>	
+							<option value="Philip Brisk">Philip Brisk</option>	
+							<option value="Ranjitha Kashyap">Ranjitha Kashyap</option>
+							<option value="Roozbeh Jafari">Roozbeh Jafari</option>	
+							<option value="Ryan Debbiny">Ryan Debbiny</option>	
+							<option value="Sabah Chaudhry">Sabah Chaudhry</option>	
+							<option value="Saro Meguerdichian">Saro Meguerdichian</option>	
+							<option value="Sevak Asadorian">Sevak Asadorian</option>
+							<option value="Seyed Sajjadi">Seyed Sajjadi</option>	
+							<option value="Shaun Ahmadian">Shaun Ahmadian</option>	
+							<option value="Sheng Wei">Sheng Wei</option>	
+							<option value="Siew Sia">Siew Don Sia</option>
+							<option value="Soheil Ghiasi">Soheil Ghiasi</option>	
+							<option value="Sunghoon Ivan Lee">Sunghoon Ivan Lee</option>	
+							<option value="Tammara Massey">Tammara Massey</option>	
+							<option value="Taraneh Taghavi">Taraneh Taghavi</option>	
+							<option value="Thanos Stathopoulus">Thanos Stathopoulus</option>	
+							<option value="Victor Chen">Victor Chen</option>	
+							<option value="Victor Gabrielian">Victor Gabrielian</option>	
+							<option value="Vinh Tran">Vinh Tran</option>	
+							<option value="Wen-Sao Hong">Wen-Sao Hong</option>	
+							<option value="William Kaiser">William Kaiser</option>	
+							<option value="William McCarthy">William McCarthy</option>
+							<option value="Won Chang">Won Chang</option>
+						</select>
+					</div>
+					<p class="col-xs-12 prb">&nbsp;</p>
+					<div class="col-md-4">
+						<label>Year:</label>
+						<select class="form-control" id="year" form="advanceSearchForm">
+							<option value="">Any</option>
+							<option value="2016">2016</option>
+							<option value="2015">2015</option>
+							<option value="2014">2014</option>
+							<option value="2013">2013</option>
+							<option value="2012">2012</option>
+							<option value="2011">2011</option>
+							<option value="2010">2010</option>
+							<option value="2009">2009</option>
+							<option value="2008">2008</option>
+							<option value="2007">2007</option>
+							<option value="2006">2006</option>
+							<option value="2005">2005</option>
+							<option value="2004">2004</option>
+							<option value="2003">2003</option>
+						</select>
+					</div>
+					<div class="col-xs-12">
+						<label>&nbsp;</label>
+						<input type="text" id="advSearch" class="form-control" placeholder="Type any phrase/keywords to search" form="advanceSearchForm" />
+						<p style="text-align:left;" class="help-block">Separate the keywords with (white)spaces</p>
+					</div>
+					<p class="col-xs-12">&nbsp;</p>
+					<center>
+						<button class="btn btn-success" onclick="advanceSearch();">Search</button>
+						<button class="btn btn-warning" onclick="reset();">Reset</button>
+						<p style="color:red;display:none;" id="errMsg"><br />You need to fill atleast one of the above fields to search !!!<br /></p>
+					</center>
+					<p class="col-md-12">&nbsp;</p>
+				</div>
+				<div id="journal">
+					<p class="col-md-12">&nbsp;</p>
+					<fieldset class="col-md-12">
+						<legend>Journal Papers</legend>
+					</fieldset>
+					<p id="jErrMsg" style="display:none;">No match found.</p>
+					<div class="col-md-12 wow fadeInDown journalContent">
+						<h3>J10</h3>
+						<p>Sheng Wei, Ani Nahapetian, Miodrag Potkonjak. Quantitative Intellectual Property Protection Using Physical-Level Characterization. IEEE 
+						Transactions on Information Forensics and Security, Vol.8, No.11, pp.1722,1730, November 2013.</p>
+					</div>
+					<div class="col-md-12 wow fadeInDown journalContent">
+						<h3>J9</h3>
+						<p>Sheng Wei, Ani Nahapetian, Michael Nelson, Farinaz Koushanfar, Miodrag Potkonjak. Gate Characterization Using Singular Value 
+						Decomposition: Foundations and Applications. IEEE Transactions on Information Forensics and Security, Vol. 7 No. 2, pp. 765-773, April 
+						2012.</p>
+						<a href="http://web.cs.ucla.edu/~ani/publications/[TIFS2012]SVD.pdf" target="_blank"  ><span class="glyphicon glyphicon-file"></span> Paper</a>
+					</div>
+					<div class="col-md-12 wow fadeInDown journalContent">
+						<h3>J8</h3>
+						<p>Myung-kyung Suh, Ani Nahapetian, Jonathan Woodbridge, Mahsan Rofouei, Majid Sarrafzadeh. Machine Learning-Based Adaptive Wireless 
+						Interval Training Guidance System. ACM/Springer Mobile Networks and Applications (MONET), Vol. 17, No. 2, pp. 163-177, 2012.</p>
+						<a href="http://web.cs.ucla.edu/~ani/publications/[2011]MONET.pdf" target="_blank"  ><span class="glyphicon glyphicon-file"></span> Paper</a>
+					</div>
+					<div class="col-md-12 wow fadeInDown journalContent">
+						<h3>J7</h3>
+						<p>Myung-kyung Suh, Chien-An Chen, Jonathan Woodbridge, Michael Kai Tu, Jung In Kim, Ani Nahapetian, Lorraine S. Evangelista, Majid 
+						Sarrafzadeh. A Remote Patient Monitoring System for Congestive Heart Failure. Springer Journal of Medical Systems (JOMS), Vol 35, No. 5, 
+						pp. 1165-1179, June 2011.</p>
+						<a href="http://web.cs.ucla.edu/~ani/publications/[2011]JOMS.pdf" target="_blank"  ><span class="glyphicon glyphicon-file"></span> Paper</a>
+					</div>
+					<div class="col-md-12 wow fadeInDown journalContent">
+						<h3>J6</h3>
+						<p>Ani Nahapetian, Philip Brisk, Soheil Ghiasi, Majid Sarrafzadeh. An Approximation Algorithm for Scheduling on Heterogeneous 
+						Reconfigurable Resources. ACM Transactions on Embedded Computing (TECS), Vol. 9, No. 1, October 2009.</p>
+						<a href="http://web.cs.ucla.edu/~ani/publications/[TECS2009]ApproxAlg_a5-nahapetian.pdf" target="_blank"  ><span class="glyphicon glyphicon-file"></span> Paper</a>
+					</div>
+					<div class="col-md-12 wow fadeInDown journalContent">
+						<h3>J5</h3>
+						<p>Roozbeh Jafari, Hassan Ghasemzadeh, Foad Dabiri, Ani Nahapetian, Majid Sarrafzadeh. An Efficient Placement and Routing Technique for
+						Fault-Tolerant Distributed Embedded Computing. ACM Transactions on Embedded Computing (TECS), Vol. 8, No. 4, July 2009.</p>
+						<a href="http://web.cs.ucla.edu/~ani/publications/[TECS2009]a28-jafari.pdf" target="_blank"  ><span class="glyphicon glyphicon-file"></span> Paper</a>
+					</div>
+					<div class="col-md-12 wow fadeInDown journalContent">
+						<h3>J4</h3>
+						<p>Foad Dabiri, Ani Nahapetian, Tammara Massey, Miodrag Potkonjak, Majid Sarrafzadeh. General Methodology for Soft Error-Aware Power 
+						Optimization using Gate Sizing. IEEE Transactions on CAD (TCAD), Vol. 27, No. 10, Oct. 2008.</p>
+						<a href="http://web.cs.ucla.edu/~ani/publications/TCAD08.pdf" target="_blank"  ><span class="glyphicon glyphicon-file"></span> Paper</a>
+					</div>
+					<div class="col-md-12 wow fadeInDown journalContent">
+						<h3>J3</h3>
+						<p>Soheil Ghiasi, Ani Nahapetian, Hyun J. Moon, Majid Sarrafzadeh. Reconfiguration in Network of Embedded Systems: Challenges and Adaptive
+						Tracking Case Study. Journal of Embedded Computing (JEC) Vol. 1, No. 1, pp. 147-166, January 2005.</p>
+						<a href="http://web.ece.ucdavis.edu/~soheil/publications/journal/JEC-survey.pdf" target="_blank"  ><span class="glyphicon glyphicon-file"></span> Paper</a>
+					</div>
+					<div class="col-md-12 wow fadeInDown journalContent">
+						<h3>J2</h3>
+						<p>Soheil Ghiasi, Hyun J. Moon, Ani Nahapetian, Majid Sarrafzadeh. Collaborative and Reconfigurable Object Tracking. Kluwer Journal of 
+						Supercomputing Vol. 30, No. 3, pp. 213-238, December 2004.</p>
+						<a href="http://web.ece.ucdavis.edu/~soheil/publications/journal/KJSC.pdf" target="_blank"  ><span class="glyphicon glyphicon-file"></span> Paper</a>
+					</div>
+					<div class="col-md-12 wow fadeInDown journalContent">
+						<h3>J1</h3>
+						<p>Soheil Ghiasi, Ani Nahapetian, Majid Sarrafzadeh. An Optimal Algorithm for Minimizing Runtime Reconfiguration Delay. ACM Transactions 
+						on Embedded Computing Systems (TECS) Vol. 3, No. 2, pp. 237-256, May 2004.</p>
+						<a href="http://web.cs.ucla.edu/~ani/publications/TECS03.pdf" target="_blank"  ><span class="glyphicon glyphicon-file"></span> Paper</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-12" id="book">
+				<p class="col-md-12">&nbsp;</p><p class="col-md-12">&nbsp;</p>
+				<fieldset class="col-md-12">
+					<legend>Book Chapter</legend>
+				</fieldset>
+				<p id="bErrMsg" style="display:none;">No match found.</p>
+				<div class="col-md-12 wow fadeInDown bookContent">
+					<h3>BC1</h3>
+					<p>Foad Dabiri, Roozbeh Jafari, Tammara Massey, Ani Nahapetian, Majid Sarrafzadeh. Lightweight Embedded Systems. Computer Engineering 
+					Handbook, Edited by Vojin Oklobdzija, Taylor & Francis/CRC Press, 2008.</p>
+				</div>
+			</div>
+			<div class="col-md-12" id="conference">
+				<p class="col-md-12">&nbsp;</p><p class="col-md-12">&nbsp;</p>
+				<fieldset class="col-md-12">
+					<legend>Conference and Workshop Papers</legend>
+				</fieldset>
+				<p id="cErrMsg" style="display:none;">No match found.</p>
+				<div class="col-md-12 wow fadeInDown papersContent">
+					<h3>C46</h3>
+					<p>Ani Nahapetian. Side-Channel Attacks on Mobile and Wearable Systems. IEEE Conference Consumer Communications and Networking (CCNC), 
+					January 2016.</p>
+				</div>
+				<div class="col-md-12 wow fadeInDown papersContent">
+					<h3>C45</h3>
+					<p>Danial Moazen, Seyed Sajjadi Ani Nahapetian. AirDraw: Leveraging Smart Watch Motion Sensors for Mobile Human Computer Interactions. 
+					 IEEE Conference Consumer Communications and Networking (CCNC), January 2016.</p>
+				</div>
+				<div class="col-md-12 wow fadeInDown papersContent">
+					<h3>C44</h3>
+					<p>Allen Sarkisyan, Ryan Debbiny, Ani Nahapetian. WristSnoop: Smartphone PINs Prediction using Smartwatch Motion Sensors. IEEE Workshop on 
+					Information Forensics and Security (WIFS), November 2015.</p>
+				</div>
+				<div class="col-md-12 wow fadeInDown papersContent">
+					<h3>C43</h3>
+					<p>Gladys Mae Garcia, Ani Nahapetian. Wearable Computing for Image-Based Indoor Navigation of the Visually Impaired. ACM Wireless Health,
+					October 2015.</p>
+				</div>
+				<div class="col-md-12 wow fadeInDown papersContent">
+					<h3>C42</h3>
+					<p>Dina Najeeb, Antonio Grass, Gladys Garcia, Ryan Debbiny and Ani Nahapetian. MindLogger: A Brain-Computer Interface for Word Building 
+					using Brainwaves. ACM Workshop on Mobile Medical Applications, held in conjuntion with Conference on Embedded Networked Sensor Systems (Sensys), November 2014.</p>
+				</div>
+				<div class="col-md-12 wow fadeInDown papersContent">
+					<h3>C41</h3>
+					<p>Ranjitha Kashyap, Ani Nahapetian. Tweet Analysis for User Health Monitoring. IEEE International Conference on Wireless Mobile 
+					Communication and Healthcare (MobiHealth), November 2014.</p>
+				</div>
+				<div class="col-md-12 wow fadeInDown papersContent">
+					<h3>C40</h3>
+					<p>Dina Najeeb, Ani Nahapetian. 2C Vision Game: Visual Acuity Self-Testing Using Mobile Devices. ACM International Conference on Body Area
+					Networks (BodyNets), September 2014.</p>
+				</div>
+				<div class="col-md-12 wow fadeInDown papersContent">
+					<h3>C39</h3>
+					<p>Arsen Papisyan, Ani Nahapetian. LightVest: A Wearable Body Position Monitor Using Ambient and Infrared Light. ACM International 
+					Conference on Body Area Networks (BodyNets), September 2014.</p>
+				</div>
+				<div class="col-md-12 wow fadeInDown papersContent">
+					<h3>C38</h3>
+					<p>Kyeong Hoon Jung, Vinh Tran, Victor Gabrielian, Ani Nahapetian. Virtual Cuff: Multisensory Non-Intrusive Blood Pressure Monitoring. ACM
+					International Conference on Body Area Networks (BodyNets), September 2014.</p>
+				</div>
+				<div class="col-md-12 wow fadeInDown papersContent">
+					<h3>C37</h3>
+					<p>Sheng Wei, James B Wendt, Ani Nahapetian, Miodrag Potkonjak. Reverse Engineering and Prevention Techniques for Physical Unclonable
+					Functions Using Side Channels. Design Automation Conference (DAC), June 2014.	(Best Paper Nominee)</p>
+				</div>
+				<div class="col-md-12 wow fadeInDown papersContent">
+					<h3>C36</h3>
+					<p>Ashley Yu, Ani Nahapetian. Participatory Sensing for Fighting Food Deserts. ACM International Conference on Body Area Networks 
+					(BodyNets), September 2013.</p>
+				</div>
+				<div class="col-md-12 wow fadeInDown papersContent">
+					<h3>C35</h3>
+					<p>Davit Stepanyan, Ani Nahapetian. Addressing Responsiveness in Interactive, Pervasive Games. IEEE ICME 2013 - International Workshop on 
+					Networking Issues in Multimedia Entertainment (NIME13), July 2013.</p>
+					<a href="http://web.cs.ucla.edu/~ani/publications/[ICME2013]InteractiveGames.pdf" target="_blank" ><span class="glyphicon glyphicon-file"></span> Paper</a>
+				</div>
+				<div class="col-md-12 wow fadeInDown papersContent">
+					<h3>C34</h3>
+					<p>Ani Nahapetian. Incorporating Development for Mobile Devices When Teaching Software Engineering. IEEE Engineering Design Education
+					Conference (IEDEC), March 2013.</p>
+					<a href="http://web.cs.ucla.edu/~ani/publications/[IEDEC2013]Mobile.pdf" target="_blank"  ><span class="glyphicon glyphicon-file"></span> Paper</a>
+				</div>
+				<div class="col-md-12 wow fadeInDown papersContent">
+					<h3>C33</h3>
+					<p>Sunghoon Ivan Lee, Jonathan Woodbridge, Ani Nahapetian, Majid Sarrafzadeh. MARHS: Mobility Assessment System with Remote Healthcare 
+					Functionality for Movement Disorders. ACM SIGHIT International Health Informatics Symposium (IHI), January 2012.</p>
+					<a href="http://web.cs.ucla.edu/~ani/publications/[IHI2012]MAHRS_p333-lee.pdf" target="_blank"  ><span class="glyphicon glyphicon-file"></span> Paper</a>
+				</div>
+				<div class="col-md-12 wow fadeInDown papersContent">
+					<h3>C32</h3>
+					<p>Sunghoon Ivan Lee, Charles Ling, Ani Nahapetian, Majid Sarrafzadeh. A Framework for Data Quality Estimation of On-Body Cardiac Sensor 
+					Networks. IEEE Consumer Communications and Networking Conference (CCNC), January 2012.</p>
+					<a href="http://web.cs.ucla.edu/~ani/publications/ieee_ccnc_2012.pdf" target="_blank"  ><span class="glyphicon glyphicon-file"></span> Paper</a>
+				</div>
+				<div class="col-md-12 wow fadeInDown papersContent">
+					<h3>C31</h3>
+					<p>Sheng Wei, Ani Nahapetian, Miodrag Potkonjak. Robust Passive Hardware Metering. International Conference on Computer-Aided Design 
+					(ICCAD), November 2011.</p>
+					<a href="http://web.cs.ucla.edu/~ani/publications/[ICCAD2011]Hardware_Metering.pdf" target="_blank"  ><span class="glyphicon glyphicon-file"></span> Paper</a>
+				</div>
+				<div class="col-md-12 wow fadeInDown papersContent">
+					<h3>C30</h3>
+					<p>Armen Babakanian, Ani Nahapetian. Data Fusion for Movement Visualization in a Remote Health Monitoring System. IEEE International 
+					Conference on Mobile Computing, Applications, and Services (MobiCASE), October 2011.</p>
+					<a href="http://web.cs.ucla.edu/~ani/publications/[MobiCASE2011]DateFusion.pdf" target="_blank"  ><span class="glyphicon glyphicon-file"></span> Paper</a>
+				</div>
+				<div class="col-md-12 wow fadeInDown papersContent">
+					<h3>C29</h3>
+					<p>Miodrag Potkonjak, Saro Meguerdichian, Ani Nahapetian, Sheng Wei. Differential Public Physically Unclonable Functions: Architecture and
+					Applications. Design Automation Conference (DAC), June 2011.</p>
+					<a href="http://web.cs.ucla.edu/~ani/publications/[DAC2011]dPPUF.pdf" target="_blank"  ><span class="glyphicon glyphicon-file"></span> Paper</a>
+				</div>
+				<div class="col-md-12 wow fadeInDown papersContent">
+					<h3>C28</h3>
+					<p>Ani Nahapetian. Logic Design as an Entry Point for Non-engineers: Increasing Diversity in Microelectronics Education and Research. 
+					Conference on Microelectronics Systems Education (MSE), June 2011.</p>
+					<a href="http://web.cs.ucla.edu/~ani/publications/[MSE2011]LogicDesign_05937098.pdf" target="_blank"  ><span class="glyphicon glyphicon-file"></span> Paper</a>
+				</div>
+				<div class="col-md-12 wow fadeInDown papersContent">
+					<h3>C27</h3>
+					<p>Ani Nahapetian. La Bella Figura: Making a Good Impression When Teaching Introduction to Programming to Non-engineers. CCSC Southwestern
+					Conference, April 2011.</p>
+					<a href="http://web.cs.ucla.edu/~ani/publications/[CCSC2011]BellaFigura.pdf" target="_blank"  ><span class="glyphicon glyphicon-file"></span> Paper</a>
+				</div>
+				<div class="col-md-12 wow fadeInDown papersContent">
+					<h3>C26</h3>
+					<p>Myung-kyung Suh, Lorraine S. Evangelista, Chien-An Chen, Kyungsik Han, Jinha Kang, Michael Kai Tu, Victor Chen, Ani Nahapetian, Majid 
+					Sarrafzadeh. An Automated Vital Sign Monitoring System for Congestive Heart Failure Patients. ACM International Health Informatics 
+					Symposium (IHI), November 2010.</p>
+					<a href="http://web.cs.ucla.edu/~ani/publications/[2010]IHI.pdf" target="_blank"  ><span class="glyphicon glyphicon-file"></span> Paper</a>
+				</div>
+				<div class="col-md-12 wow fadeInDown papersContent">
+					<h3>C25</h3>
+					<p>Myung-kyung Suh, Lorraine S. Evangelista, Victor Chen, Wen-Sao Hong, Jamie Macbeth, Ani Nahapetian, Florence-Joy Figueras, Majid
+					Sarrafzadeh. WANDA B.: Weight and Activity with Blood Pressure Monitoring System for Heart Failure Patients. IEEE Workshop on
+					Interdisciplinary Research on E-Health Services and Systems (IREHSS) held in conjunction with WoWMoM 2010, June 2010.</p>
+					<a href="http://web.cs.ucla.edu/~ani/publications/[IREHSS]%20WANDAB.%20CameraReady.pdf" target="_blank"  ><span class="glyphicon glyphicon-file"></span> Paper</a>
+				</div>
+				<div class="col-md-12 wow fadeInDown papersContent">
+					<h3>C24</h3>
+					<p>Jonathan Woodbridge, Hyduke Noshadi, Ani Nahapetian, Majid Sarrafzadeh. HIP: Health Integration Platform. IEEE PerHealth, Held in 
+					conjunction with PerCom, March 2010.</p>
+					<a href="http://web.cs.ucla.edu/~ani/publications/perhealth2010.pdf" target="_blank"  ><span class="glyphicon glyphicon-file"></span> Paper</a>
+				</div>
+				<div class="col-md-12 wow fadeInDown papersContent">
+					<h3>C23</h3>
+					<p>Kyle Dorman, Marjan Yahyanejad, Ani Nahapetian, Majid Sarrafzadeh, William McCarthy, William Kaiser. Nutrition Monitor: A Food Purchase 
+					and Consumption Monitoring Mobile System. Conference on Mobile Computing, Applications, and Services (MobiCASE), October 2009.</p>
+					<a href="http://web.cs.ucla.edu/~ani/publications/Nutrition%20Monitor.pdf" target="_blank"  ><span class="glyphicon glyphicon-file"></span> Paper</a>
+				</div>
+				<div class="col-md-12 wow fadeInDown papersContent">
+					<h3>C22</h3>
+					<p>Myung-kyung Suh, KyuJoong Lee, Alfred Heu, Ani Nahapetian, Majid Sarrafzadeh. Bayesian Networks-Based Interval Training Guidance System
+					for Cancer Rehabilitation. Conference on Mobile Computing, Applications, and Services (MobiCASE), October 2009. (Best Paper Award)</p>
+					<a href="http://web.cs.ucla.edu/~ani/publications/Bayesian_Networks-Based_Interval_Training_Guidance_System_for_Cancer_Rehabilitation_v10.pdf" target="_blank"  ><span class="glyphicon glyphicon-file"></span> Paper</a>
+				</div>
+				<div class="col-md-12 wow fadeInDown papersContent">
+					<h3>C21</h3>
+					<p>Miodrag Potkonjak, Ani Nahapetian, Michael Nelson, Tammara Massey. Hardware Trojan Horse Detection Using Gate-Level Characterization. 
+					Design Automation Conference (DAC), July 2009.</p>
+					<a href="http://web.cs.ucla.edu/~ani/publications/[DAC2009]TrojanHorse.pdf" target="_blank"  ><span class="glyphicon glyphicon-file"></span> Paper</a>
+				</div>
+				<div class="col-md-12 wow fadeInDown papersContent">
+					<h3>C20</h3>
+					<p>Myung-kyung Suh, KyuJoong Lee, Ani Nahapetian, Majid Sarrafzadeh. Interval Training Guidance System with Music and Wireless Group 
+					Exercise Motivations. IEEE Symposium on Industrial Embedded Systems (SIES), July 2009.</p>
+					<a href="http://web.cs.ucla.edu/~ani/publications/Interval_Training_Guidance_System_2_col_v6_3.pdf" target="_blank"  ><span class="glyphicon glyphicon-file"></span> Paper</a>
+				</div>
+				<div class="col-md-12 wow fadeInDown papersContent">
+					<h3>C19</h3>
+					<p>Michael Nelson, Ani Nahapetian, Farinaz Koushanfar, Miodrag Potkonjak. SVD-Based Ghost Circuitry Detection. Information Hiding (IH), 
+					June 2009.</p>
+					<a href="http://web.cs.ucla.edu/~ani/publications/TypesetVersion.pdf" target="_blank"  ><span class="glyphicon glyphicon-file"></span> Paper</a>
+				</div>
+				<div class="col-md-12 wow fadeInDown papersContent">
+					<h3>C18</h3>
+					<p>Myung-kyung Suh, Mahsan Rofouei, Ani Nahapetian, William Kaiser, Majid Sarrafzadeh. Optimizing Interval Training Protocols Using Data 
+					Mining Decision Trees. Body Sensor Networks (BSN), June 2009.</p>
+					<a href="http://web.cs.ucla.edu/~ani/publications/Optimized_Interval_Training_Protocol.pdf" target="_blank"  ><span class="glyphicon glyphicon-file"></span> Paper</a>
+				</div>
+				<div class="col-md-12 wow fadeInDown papersContent">
+					<h3>C17</h3>
+					<p>Jonathan Woodbridge, Ani Nahapetian, Hyduke Noshadi, William Kaiser, Majid Sarrafzadeh. Wireless Health and the Smart Phone Conundrum.
+					HCMDSS/MDPnP, Held in conjunction with IPSN, April 2009.</p>
+					<a href="http://web.cs.ucla.edu/~ani/publications/smartphoneconundrum.pdf" target="_blank"  ><span class="glyphicon glyphicon-file"></span> Paper</a>
+				</div>
+				<div class="col-md-12 wow fadeInDown papersContent">
+					<h3>C16</h3>
+					<p>Mars Lan, Ani Nahapetian, Alireza Vahdatpour, Lawrence Au, William Kaiser, Majid Sarrafzadeh. SmartFall: An Automatic Fall Detection 
+					System Based on Subsequence Matching for the SmartCane. International Conference on Body Area Networks (BodyNets), April 2009.</p>
+					<a href="http://web.cs.ucla.edu/~ani/publications/bodynets09.pdf" target="_blank"  ><span class="glyphicon glyphicon-file"></span> Paper</a>
+				</div>
+				<div class="col-md-12 wow fadeInDown papersContent">
+					<h3>C15</h3>
+					<p>Hyduke Noshadi, Shaun Ahmadian, Foad Dabiri, Ani Nahapetian, Thanos Stathopoulus, Maxim Batalin, William Kaiser, Majid Sarrafzadeh.
+					Smart Shoe for Balance, Fall Risk Assessment and Applications in Wireless Health. Microsoft eScience Workshop, December 2008.</p>
+					<a href="http://web.cs.ucla.edu/~ani/publications/SmartShoe-2008-eScience-.pdf" target="_blank"  ><span class="glyphicon glyphicon-file"></span> Paper</a>
+				</div>
+				<div class="col-md-12 wow fadeInDown papersContent">
+					<h3>C14</h3>
+					<p>Ani Nahapetian. Bridging Classroom Heterogeneity: A Software Engineering Course and Projects. Informatics Education Europe (IEE), 
+					December 2008.</p>
+					<a href="http://web.cs.ucla.edu/~ani/publications/IEE_Nahapetian.pdf" target="_blank"  ><span class="glyphicon glyphicon-file"></span> Paper</a>
+				</div>
+				<div class="col-md-12 wow fadeInDown papersContent">
+					<h3>C13</h3>
+					<p>Ani Nahapetian, Foad Dabiri, Miodrag Potkonjak, Majid Sarrafzadeh. Optimization for Real-Time Systems with Non-Convex Power-Speed 
+					Models. Workshop on Power and Timing Modeling, Optimization and Simulation (PATMOS), September 2007.</p>
+					<a href="http://web.cs.ucla.edu/~ani/publications/Nahapetian_Patmos07_cameraReady.pdf" target="_blank"  ><span class="glyphicon glyphicon-file"></span> Paper</a>
+				</div>
+				<div class="col-md-12 wow fadeInDown papersContent">
+					<h3>C12</h3>
+					<p>Foad Dabiri, Ani Nahapetian, Miodrag Potkonjak, Majid Sarrafzadeh. Soft Error-Aware Power Optimization using Gate Sizing. Workshop on
+					Power and Timing Modeling, Optimization and Simulation (PATMOS), September 2007.</p>
+					<a href="http://web.cs.ucla.edu/~ani/publications/Paper-121.pdf" target="_blank"  ><span class="glyphicon glyphicon-file"></span> Paper</a>
+				</div>
+				<div class="col-md-12 wow fadeInDown papersContent">
+					<h3>C11</h3>
+					<p>Ani Nahapetian, Sabah Chaudhry, Foad Dabiri, Tammara Massey, Hyduke Noshadi, Majid Sarrafzadeh. Wireless Body Sensor Enhanced Trackin
+					g for Extended In-Home Care. Workshop on Wireless Sensor Networks for Health Care (WSNHC), June 2007.</p>
+					<a href="http://web.cs.ucla.edu/~ani/publications/BodySensorEnhancedTracking_cameraReady.pdf" target="_blank"  ><span class="glyphicon glyphicon-file"></span> Paper</a>
+				</div>
+				<div class="col-md-12 wow fadeInDown papersContent">
+					<h3>C10</h3>
+					<p> Ani Nahapetian, Paolo Lombardo, Andrea Acquaviva, Luca Benini, Majid Sarrafzadeh. Dynamic Reconfiguration in Sensor Networks with 
+					Regenerative Energy Sources. Design Automation and Test Europe (DATE), April 2007.</p>
+					<a href="http://web.cs.ucla.edu/~ani/publications/07e_1_909.pdf" target="_blank"  ><span class="glyphicon glyphicon-file"></span> Paper</a>
+					&nbsp;&nbsp;&nbsp;
+					<a href="http://web.cs.ucla.edu/~ani/publications/DATE07_ReconfigWithRegenE.pdf" target="_blank"><span class="glyphicon glyphicon-blackboard"></span> Slides</a>
+				</div>
+				<div class="col-md-12 wow fadeInDown papersContent">
+					<h3>C9</h3>
+					<p>Foad Dabiri, Roozbeh Jafari, Ani Nahapetian,Majid Sarrafzadeh. A Unified Optimal Voltage Selection Methodology for Low-power Systems. 
+					International Symposium on Quality Electronic Design (ISQED), March 2007.</p>
+					<a href="http://web.cs.ucla.edu/~ani/publications/OptimalPower_isqed07.pdf" target="_blank"  ><span class="glyphicon glyphicon-file"></span> Paper</a>
+				</div>
+				<div class="col-md-12 wow fadeInDown papersContent">
+					<h3>C8</h3>
+					<p>Taraneh Taghavi, Ani Nahapetian,Majid Sarrafzadeh. System Level Estimation of Interconnect Length in the Presence of IP Blocks. 
+					International Symposium on Quality Electronic Design (ISQED), March 2007.</p>
+					<a href="http://web.cs.ucla.edu/~ani/publications/PID337041_final.pdf" target="_blank"  ><span class="glyphicon glyphicon-file"></span> Paper</a>
+				</div>
+				<div class="col-md-12 wow fadeInDown papersContent">
+					<h3>C7</h3>
+					<p>Taraneh Taghavi, Foad Dabiri, Ani Nahapetian, Majid Sarrafzadeh. Congestion Prediction. Workshop on System Level Interconnect 
+					Prediction (SLIP), March 2007.</p>
+					<a href="http://web.cs.ucla.edu/~ani/publications/slip77v.pdf" target="_blank"  ><span class="glyphicon glyphicon-file"></span> Paper</a>
+				</div>
+				<div class="col-md-12 wow fadeInDown papersContent">
+					<h3>C6</h3>
+					<p>Majid Sarrafzadeh, Foad Dabiri, Roozbeh Jafari, Tammara Massey, Ani Nahapetian. Low Power Lightweight Embedded Systems. International 
+					Symposium on Low Power Electronics and Design (ISLPED), October 2006.</p>
+					<a href="http://web.cs.ucla.edu/~ani/publications/emb.pdf" target="_blank"  ><span class="glyphicon glyphicon-file"></span> Paper</a>
+				</div>
+				<div class="col-md-12 wow fadeInDown papersContent">
+					<h3>C5</h3>
+					<p>Foad Dabiri, Ani Nahapetian, Majid Sarrafzadeh. General Delay Budgeting on Directed Acyclic Graphs with Applications in CAD. Electronic
+					Notes in Discrete Mathematics 27, pp. 95-96, 2006.</p>
+					<a href="http://www.sciencedirect.com/science?_ob=MImg&_imagekey=B75GV-4KWCG5Y-1M-1&_cdi=13104&_user=4423&_orig=browse&_coverDate=10%2F01%2F2006&_sk=999729999&view=c&wchp=dGLbVlb-zSkWb&md5=8eff0a9a4f1753b732d59489a8cd3a9a&ie=/sdarticle.pdf" target="_blank"  ><span class="glyphicon glyphicon-file"></span> Paper</a>
+				</div>
+				<div class="col-md-12 wow fadeInDown papersContent">
+					<h3>C4</h3>
+					<p>Ani Nahapetian, Foad Dabiri, Majid Sarrafzadeh. Energy Minimization and Reliability for Wearable Medical Applications. International 
+					Conference on Parallel Processing (ICPP), August 2006.</p>
+					<a href="http://web.cs.ucla.edu/~ani/publications/icpp06_energy.pdf" target="_blank"  ><span class="glyphicon glyphicon-file"></span> Paper</a>
+				</div>
+				<div class="col-md-12 wow fadeInDown papersContent">
+					<h3>C3</h3>
+					<p>Philip Brisk, Jamie Macbeth, Ani Nahapetian, Majid Sarrafzadeh.A Dictionary Construction Technique for Code Compression Systems with 
+					Echo Instructions. Conference on Languages, Compilers, and Tools for Embedded Systems (LCTES), June 2005.</p>
+					<a href="http://web.cs.ucla.edu/~ani/publications/compression_lctes05.pdf" target="_blank"  ><span class="glyphicon glyphicon-file"></span> Paper</a>
+				</div>
+				<div class="col-md-12 wow fadeInDown papersContent">
+					<h3>C2</h3>
+					<p>Philip Brisk, Ani Nahapetian, Majid Sarrafzadeh. Instruction Selection for Compilers that Target Architectures with Echo Instructions. 
+					International Workshop on Software and Compilers for Embedded Systems (SCOPES), September 2004.</p>
+					<a href="http://web.cs.ucla.edu/~ani/publications/echo_scopes04.pdf" target="_blank"  ><span class="glyphicon glyphicon-file"></span> Paper</a>
+					&nbsp;&nbsp;&nbsp;
+					<a href="http://web.cs.ucla.edu/~ani/publications/scopes04_presentation.pdf" target="_blank"><span class="glyphicon glyphicon-blackboard"></span> Slides</a>
+				</div>
+				<div class="col-md-12 wow fadeInDown papersContent">
+					<h3>C1</h3>
+					<p>Ani Nahapetian, Soheil Ghiasi, Majid Sarrafzadeh. Task Scheduling on Heterogeneous Resources with Heterogeneous Reconfiguration Costs.
+					Parallel and Distributed Computing and Systems (PDCS): Special Session on Synthesis for Programmable System, November 2003.</p>
+					<a href="http://web.cs.ucla.edu/~ani/publications/Nahapetian_TaskScheduling_final.pdf" target="_blank"  ><span class="glyphicon glyphicon-file"></span> Paper</a>
+				</div>
+			</div>
+			<p class="col-md-12">&nbsp;</p><p class="col-md-12">&nbsp;</p>
+			<div class="col-md-12" id="patent">
+				<fieldset class="col-md-12">
+					<legend>Patents</legend>
+				</fieldset>
+				<p id="pErrMsg" style="display:none;">No match found.</p>
+				<div class="col-md-12 wow fadeInDown patentsContent">
+					<h3>P4</h3>
+					<p>Miodrag Potkonjak, Ani Nahapetian. Semantic Medical Devices. US Patent 20,130,041,861, 2013.</p>
+				</div>
+				<div class="col-md-12 wow fadeInDown patentsContent">
+					<h3>P3</h3>
+					<p>Majid Sarrafzadeh, Ani Nahapetian, Alireza Vahdatpour, Mahsan Rofouei. Apparatus, System, and Method for Automatic Identification of 
+					Sensor Placement. WO Patent 2,012,119,126, 2012.</p>
+				</div>
+				<div class="col-md-12 wow fadeInDown patentsContent">
+					<h3>P2</h3>
+					<p>William J. Kaiser, Majid Sarrafzadeh, Denise Aberle, Maxim Batalin, Alireza Mehrnia, Ani Nahapetian, James Sayre. Distributed External
+					and Internal Wireless Sensor Systems for Characterization of Surface and Subsurface Biomedical Structure and Condition. US Patent App. 
+					13/358,703 & EP Patent 2,467,058, 2012.</p>
+				</div>
+				<div class="col-md-12 wow fadeInDown patentsContent">
+					<h3>P1</h3>
+					<p>Majid Sarrafzadeh, William J. Kaiser, Ani Nahapetian, Alireza Vahdatpour, Mahsan Rofouei. Method, System, and Apparatus for Pressure 
+					Image Registration. WO Patent WO/2011/143,073, 2011.</p>
+				</div>
+			</div>
+			<div class="col-md-12" id="thesis">
+				<p class="col-md-12">&nbsp;</p><p class="col-md-12">&nbsp;</p>
+				<fieldset class="col-md-12">
+					<legend>Theses</legend>
+				</fieldset>
+				<p id="tErrMsg" style="display:none;">No match found.</p>
+				<div class="col-md-12 wow fadeInDown thesisContent">
+					<h3>Dina Najeeb. Mobile Technology for Eye Health Monitoring. 
+					Masters Dissertation, California State University Northridge, 2015.</h3>
+					<a href="http://hdl.handle.net/10211.3/140387" target="_blank"><span class="glyphicon glyphicon-file"></span>Thesis</a>
+				</div>
+				<div class="col-md-12 wow fadeInDown thesisContent">
+					<h3>Danial Moazen. Utilizing smart watch motion sensors in human computer interaction via pattern detection. 
+					Masters Dissertation, California State University Northridge, 2015.</h3>
+					<a href="http://hdl.handle.net/10211.3/140382" target="_blank"><span class="glyphicon glyphicon-file"></span>Thesis</a>
+				</div>
+				<div class="col-md-12 wow fadeInDown thesisContent">
+					<h3>Won Chang. 1-TUI: mobile user interface for blind users
+					Masters Dissertation, California State University Northridge, 2015.</h3>
+					<a href="http://hdl.handle.net/10211.3/140408" target="_blank"><span class="glyphicon glyphicon-file"></span>Thesis</a>
+				</div>
+				<div class="col-md-12 wow fadeInDown thesisContent">
+					<h3>Gladys Garcia. Wearable Computing for Image-Based Indoor Navigation of the Visually Impaired
+					Masters Dissertation, California State University Northridge, 2015.</h3>
+					<a href="http://hdl.handle.net/10211.3/140528" target="_blank"><span class="glyphicon glyphicon-file"></span>Thesis</a>
+				</div>
+				<div class="col-md-12 wow fadeInDown thesisContent">
+					<h3>Daniel <!--Louis Bennett--> Semel. Photomapping: localization with images
+					Masters Dissertation, California State University Northridge, 2015.</h3>
+					<a href="http://hdl.handle.net/10211.3/134467" target="_blank"><span class="glyphicon glyphicon-file"></span>Thesis</a>
+				</div>
+				<div class="col-md-12 wow fadeInDown thesisContent">
+					<h3>James <!--Paul Jei--> Pan. In-Field processor failure prediction using gate level characterization
+					Masters Dissertation, California State University Northridge, 2014.</h3>
+					<a href="http://hdl.handle.net/10211.3/121552" target="_blank"><span class="glyphicon glyphicon-file"></span>Thesis</a>
+				</div>
+				<div class="col-md-12 wow fadeInDown thesisContent">
+					<h3>Arsen Papisyan. Ambient and infrared light sensing for body position monitoring
+					Masters Dissertation, California State University Northridge, 2014.</h3>
+					<a href="http://hdl.handle.net/10211.3/121172" target="_blank"><span class="glyphicon glyphicon-file"></span>Thesis</a>
+				</div>
+				<div class="col-md-12 wow fadeInDown thesisContent">
+					<h3>Ranjitha Kashyap. Big data analysis for user health tracking
+					Masters Dissertation, California State University Northridge, 2014.</h3>
+					<a href="http://hdl.handle.net/10211.3/121303" target="_blank"><span class="glyphicon glyphicon-file"></span>Thesis</a>
+				</div>
+				<div class="col-md-12 wow fadeInDown thesisContent">
+					<h3>Nipun Gupta. ECG and wearable computing for drowsiness detection
+					Masters Dissertation, California State University Northridge, 2014.</h3>
+					<a href="http://hdl.handle.net/10211.3/121318" target="_blank"><span class="glyphicon glyphicon-file"></span>Thesis</a>
+				</div>
+				<div class="col-md-12 wow fadeInDown thesisContent">
+					<h3>Sevak Asadorian. Implementation of Maple, a browser-based staff management application using Google web development toolkit and Sencha GXT application framework
+					Masters Dissertation, California State University Northridge, 2013.</h3>
+					<a href="http://hdl.handle.net/10211.2/3998" target="_blank"><span class="glyphicon glyphicon-file"></span>Thesis</a>
+				</div>
+				<div class="col-md-12 wow fadeInDown thesisContent">
+					<h3>Davit Stepanyan. There is no ball: smart phone enabled paddleboard
+					Masters Dissertation, California State University Northridge, 2013.</h3>
+					<a href="http://hdl.handle.net/10211.2/2846" target="_blank"><span class="glyphicon glyphicon-file"></span>Thesis</a>
+				</div>
+				<div class="col-md-12 wow fadeInDown thesisContent">
+					<h3>Vinh Tran. Remote coach: a remote health sensor data monitoring system
+					Masters Dissertation, California State University Northridge, 2013.</h3>
+					<a href="http://hdl.handle.net/10211.2/2837" target="_blank"><span class="glyphicon glyphicon-file"></span>Thesis</a>
+				</div>
+				<div class="col-md-12 wow fadeInDown thesisContent">
+					<h3>Siew <!--Don--> Sia. Algorithms for energy harvesting systems
+					Masters Dissertation, California State University Northridge, 2012.</h3>
+					<a href="http://hdl.handle.net/10211.2/1138" target="_blank"><span class="glyphicon glyphicon-file"></span>Thesis</a>
+				</div>
+				<div class="col-md-12 wow fadeInDown thesisContent">
+					<h3>Ani Nahapetian. Algorithms for Embedded Systems with Health Applications. Doctoral Dissertation, University of California, Los 
+					Angeles, 2007.</h3>
+				</div>
+			</div>
+		</div>
+		<p class="col-md-12">&nbsp;</p>
+	</section>
+	</div>
+    <footer id="footer" class="midnight-blue">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    &copy; 2016 All Rights Reserved.
+                </div>
+            </div>
+        </div>
+    </footer><!--/#footer-->
+
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.prettyPhoto.js"></script>
+    <script src="js/jquery.isotope.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/wow.min.js"></script>
+	<script src="js/headerAnimation.js"></script>
+	
+	<script>
+	
+		var gFlag = true;
+		
+		$(document).ready(function(){
+		
+			$(window).scroll();
+			
+			var searchBox = $("#search");
+			$(searchBox).on("input",function(){
+				var phrase = searchBox.val().replace(/[&\/\\#,+()$~%.'":*?<>{}]/g, '').toLowerCase().split(" ");
+				for(var i=0;i<phrase.length;i++){
+					if(phrase[i].length>0){
+						gFlag = false;
+						searchJournals(phrase[i],"","",i);
+						searchBooks(phrase[i],"","",i);
+						searchPapers(phrase[i],"","",i);
+						searchPatents(phrase[i],"","",i);
+						searchThesis(phrase[i],"","",i);
+						searchPhotograph(phrase[i],"","",i);
+					}
+				}
+				gFlag = true;
+				if(phrase[0].length<1){
+					showAll();
+				}
+			});
+			
+			$("#topLink").on("click", function(e){
+				$("html, body").animate({ scrollTop: 0 }, "slow");
+			});
+			
+		});
+		
+		function showAdvanceSearch(){
+			$("#advanceSearchDialogue").slideToggle();
+			$("#up").toggle();
+			$("#down").toggle();
+			reset();
+		}
+		
+		function reset(){
+			showAll();
+			$("#journal").show();
+			$("#conference").show();
+			$("#book").show();
+			$("#patent").show();
+			$("#thesis").show();
+			$("#photograph").show();
+			document.getElementById("advanceSearchForm").reset();
+		}
+		
+		function advanceSearch(){
+			
+			var publicationType = $("#publicationType");
+			var author = $("#author");
+			var year = $("#year");
+			var searchBox = $("#advSearch");
+			if(publicationType.val().length>0 || author.val().length>0 || year.val().length>0 || searchBox.val().length>0){
+				$("#errMsg").hide();
+				switch(publicationType.val()){
+					case "journal":
+					
+						$("#journal").show();
+						$("#conference").hide();
+						$("#book").hide();
+						$("#patent").hide();
+						$("#thesis").hide();
+						$("#photograph").hide();
+						var phrase = searchBox.val().replace(/[&\/\\#,+()$~%.'":*?<>{}]/g, '').toLowerCase().split(" ");
+						for(var i=0;i<phrase.length;i++){
+							if(phrase[i].length>0 || author.val().length>0 || year.val().length>0){
+								gFlag = false;
+								searchJournals(author.val().replace(/\s+/g, '').toLowerCase(),year.val(),phrase[i],i);
+							}
+						}
+						gFlag = true;
+						break;
+						
+					case "conference":
+					
+						$("#journal").hide();
+						$("#conference").show();
+						$("#book").hide();
+						$("#patent").hide();
+						$("#thesis").hide();
+						$("#photograph").hide();
+						var phrase = searchBox.val().replace(/[&\/\\#,+()$~%.'":*?<>{}]/g, '').toLowerCase().split(" ");
+						for(var i=0;i<phrase.length;i++){
+							if(phrase[i].length>0 || author.val().length>0 || year.val().length>0){
+								gFlag = false;
+								searchPapers(author.val().replace(/\s+/g, '').toLowerCase(),year.val(),phrase[i],i);
+							}
+						}
+						gFlag = true;
+						break;
+						
+					case "book":
+					
+						$("#journal").hide();
+						$("#conference").hide();
+						$("#book").show();
+						$("#patent").hide();
+						$("#thesis").hide();
+						$("#photograph").hide();
+						var phrase = searchBox.val().replace(/[&\/\\#,+()$~%.'":*?<>{}]/g, '').toLowerCase().split(" ");
+						for(var i=0;i<phrase.length;i++){
+							if(phrase[i].length>0 || author.val().length>0 || year.val().length>0){
+								gFlag = false;
+								searchBooks(author.val().replace(/\s+/g, '').toLowerCase(),year.val(),phrase[i],i);
+							}
+						}
+						gFlag = true;
+						break;
+						
+					case "patent":
+					
+						$("#journal").hide();
+						$("#conference").hide();
+						$("#book").hide();
+						$("#patent").show();
+						$("#thesis").hide();
+						$("#photograph").hide();
+						var phrase = searchBox.val().replace(/[&\/\\#,+()$~%.'":*?<>{}]/g, '').toLowerCase().split(" ");
+						for(var i=0;i<phrase.length;i++){
+							if(phrase[i].length>0 || author.val().length>0 || year.val().length>0){
+								gFlag = false;
+								searchPatents(author.val().replace(/\s+/g, '').toLowerCase(),year.val(),phrase[i],i);
+							}
+						}
+						gFlag = true;
+						break;
+						
+					case "thesis":
+					
+						$("#journal").hide();
+						$("#conference").hide();
+						$("#book").hide();
+						$("#patent").hide();
+						$("#thesis").show();
+						$("#photograph").hide();
+						var phrase = searchBox.val().replace(/[&\/\\#,+()$~%.'":*?<>{}]/g, '').toLowerCase().split(" ");
+						for(var i=0;i<phrase.length;i++){
+							if(phrase[i].length>0 || author.val().length>0 || year.val().length>0){
+								gFlag = false;
+								searchThesis(author.val().replace(/\s+/g, '').toLowerCase(),year.val(),phrase[i],i);
+							}
+						}
+						gFlag = true;
+						break;
+						
+					case "photograph":
+					
+						$("#journal").hide();
+						$("#conference").hide();
+						$("#book").hide();
+						$("#patent").hide();
+						$("#thesis").hide();
+						$("#photograph").show();
+						var phrase = searchBox.val().replace(/[&\/\\#,+()$~%.'":*?<>{}]/g, '').toLowerCase().split(" ");
+						for(var i=0;i<phrase.length;i++){
+							if(phrase[i].length>0 || author.val().length>0 || year.val().length>0){
+								gFlag = false;
+								searchJournals(author.val().replace(/\s+/g, '').toLowerCase(),year.val(),phrase[i],i);
+							}
+						}
+						gFlag = true;
+						break;
+						
+					default:
+					
+						$("#journal").show();
+						$("#conference").show();
+						$("#book").show();
+						$("#patent").show();
+						$("#thesis").show();
+						$("#photograph").show();
+						
+						var phrase = searchBox.val().replace(/[&\/\\#,+()$~%.'":*?<>{}]/g, '').toLowerCase().split(" ");
+						for(var i=0;i<phrase.length;i++){
+							if(phrase[i].length>0 || author.val().length>0 || year.val().length>0){
+								gFlag = false;
+								searchPhotograph(author.val().replace(/\s+/g, '').toLowerCase(),year.val(),phrase[i],i);
+								searchThesis(author.val().replace(/\s+/g, '').toLowerCase(),year.val(),phrase[i],i);
+								searchPatents(author.val().replace(/\s+/g, '').toLowerCase(),year.val(),phrase[i],i);
+								searchBooks(author.val().replace(/\s+/g, '').toLowerCase(),year.val(),phrase[i],i);
+								searchPapers(author.val().replace(/\s+/g, '').toLowerCase(),year.val(),phrase[i],i);
+								searchJournals(author.val().replace(/\s+/g, '').toLowerCase(),year.val(),phrase[i],i);
+							}
+						}
+						gFlag = true;
+						break;
+				}
+			
+			}else{
+				$("#errMsg").show();
+				showAll();
+			}
+		
+		}
+		
+		function showAll(){
+			$("#journal").show();
+			$("#conference").show();
+			$("#book").show();
+			$("#patent").show();
+			$("#thesis").show();
+			$("#photograph").show();
+			$(".journalContent").show();
+			$(".bookContent").show();
+			$(".papersContent").show();
+			$(".patentsContent").show();
+			$(".thesisContent").show();
+			$(".photographContent").show();
+			$("#jErrMsg").hide();
+			$("#bErrMsg").hide();
+			$("#cErrMsg").hide();
+			$("#pErrMsg").hide();
+			$("#tErrMsg").hide();
+			$("#iErrMsg").hide();
+		}
+		
+		function searchJournals(phrase1,phrase2,phrase3,i){
+			var journals = $(".journalContent");
+			if(gFlag || i==0)
+				journals.hide();
+			var flag = true;
+			$(journals).each(function(){
+				var journalContent = $(this).text().replace(/\s+/g, '').toLowerCase().replace(/[^\w\s]/gi, '');
+				if (journalContent.indexOf(phrase1)>=0 && journalContent.indexOf(phrase2)>=0 && journalContent.indexOf(phrase3)>=0){
+					$("#jErrMsg").hide();
+					$(this).show();
+					flag = false;
+				}
+			});
+			if(flag){
+				$("#jErrMsg").show();
+				//$("#journal").hide();
+			}
+			/*if(flag && gFlag){
+				$("#jErrMsg").show();
+			}*/
+		}
+		
+		function searchBooks(phrase1,phrase2,phrase3,i){
+			var books = $(".bookContent");
+			if(gFlag || i==0)
+				books.hide();
+			var flag = true;
+			$(books).each(function(){
+				var bookContent = $(this).text().replace(/\s+/g, '').toLowerCase().replace(/[^\w\s]/gi, '');
+				if (bookContent.indexOf(phrase1)>=0 && bookContent.indexOf(phrase2)>=0 && bookContent.indexOf(phrase3)>=0){
+					$("#bErrMsg").hide();
+					$(this).show();
+					flag = false;
+				}
+			});
+			if(flag){
+				$("#bErrMsg").show();
+				//$("#book").hide();
+			}
+		}
+		
+		function searchPapers(phrase1,phrase2,phrase3,i){
+			var papers = $(".papersContent");
+			if(gFlag || i==0)
+				papers.hide();
+			var flag = true;
+			$(papers).each(function(){
+				var papersContent = $(this).text().replace(/\s+/g, '').toLowerCase().replace(/[^\w\s]/gi, '');
+				if (papersContent.indexOf(phrase1)>=0 && papersContent.indexOf(phrase2)>=0 && papersContent.indexOf(phrase3)>=0){
+					$("#cErrMsg").hide();
+					$(this).show();
+					flag = false;
+				}
+			});
+			if(flag){
+				$("#cErrMsg").show();
+				//$("#conference").hide();
+			}
+		}
+		
+		function searchPatents(phrase1,phrase2,phrase3,i){
+			var patents = $(".patentsContent");
+			if(gFlag || i==0)
+				patents.hide();
+			var flag = true;
+			$(patents).each(function(){
+				var patentsContent = $(this).text().replace(/\s+/g, '').toLowerCase().replace(/[^\w\s]/gi, '');
+				if (patentsContent.indexOf(phrase1)>=0 && patentsContent.indexOf(phrase2)>=0 && patentsContent.indexOf(phrase3)>=0){
+					$("#pErrMsg").hide();
+					$(this).show();
+					flag = false;
+				}
+			});
+			if(flag){
+				$("#pErrMsg").show();
+				//$("#patent").hide();
+			}
+		}
+		
+		function searchThesis(phrase1,phrase2,phrase3,i){
+			var thesis = $(".thesisContent");
+			if(gFlag || i==0)
+				thesis.hide();
+			var flag = true;
+			$(thesis).each(function(){
+				var thesisContent = $(this).text().replace(/\s+/g, '').toLowerCase().replace(/[^\w\s]/gi, '');
+				if (thesisContent.indexOf(phrase1)>=0 && thesisContent.indexOf(phrase2)>=0 && thesisContent.indexOf(phrase3)>=0){
+					$("#tErrMsg").hide();
+					$(this).show();
+					flag = false;
+				}
+			});
+			if(flag){
+				$("#tErrMsg").show();
+				//$("#thesis").hide();
+			}
+		}
+		
+		function searchPhotograph(phrase1,phrase2,phrase3,i){
+			var photograph = $(".photographContent");
+			if(gFlag || i==0)
+				photograph.hide();
+			var flag = true;
+			$(photograph).each(function(){
+				var photographContent = $(this).text().replace(/\s+/g, '').toLowerCase().replace(/[^\w\s]/gi, '');
+				if (photographContent.indexOf(phrase1)>=0 && photographContent.indexOf(phrase2)>=0 && photographContent.indexOf(phrase3)>=0){
+					$("#iErrMsg").hide();
+					$(this).show();
+					flag = false;
+				}
+			});
+			if(flag){
+				$("#iErrMsg").show();
+				//$("#photograph").hide();
+			}
+		}
+		
+	</script>
+</body>
+</html>
